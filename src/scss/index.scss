@@ -1,0 +1,134 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*, *:before, *:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+
+body{
+  background: #202124;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  height: 100%;
+}
+
+.page-wrapper{
+  transition: all .3s ease-in-out;
+}
+
+.container{
+  width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header{
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+  margin: 40px 40px;
+}
+
+.main{
+  position: relative;
+
+  &-title{
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+.carts{
+  display: flex;    
+  flex-wrap: wrap;
+  align-items: start;
+
+  &-item{
+    max-width: 242px;
+    width: 100%;
+    background: #202124;
+    border: 1px solid #5f6368;
+    border-radius: 15px;
+    margin-left: 40px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      border-color: #fff;
+    }
+
+    &__title{
+      margin: 19px 10px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      max-height: 50px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    &__subtitle{
+      margin: 30px 10px;
+      margin-bottom: 30px;
+      max-height: 200px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+  }
+}
+
+.footer{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  &-plus{
+    cursor: pointer;
+  }
+}
+
+.todo-empty{
+  h3{
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
