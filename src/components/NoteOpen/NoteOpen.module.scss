@@ -1,4 +1,9 @@
-.wrapper{
+.app {
+  transition: all .3s ease-in-out;
+
+}
+.wrapperOpen, 
+.wrapperClose {
   position: fixed;
   z-index: 1000;
   max-width: 621px;
@@ -10,10 +15,22 @@
   border-radius: 32px;
   display: flex;
   flex-direction: column;
+  transition: all .3s ease-in-out;
 }
 
-.imgWrapper{
-  width: 100%;  
+.wrapperClose {
+  visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapperOpen {
+  visibility: visible;
+  opacity: 1;
+}
+
+.imgWrapper {
+  width: 100%;
   display: flex;
   justify-content: right;
 }

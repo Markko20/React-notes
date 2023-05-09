@@ -14,7 +14,7 @@ export const CartSlice = createSlice({
   reducers: {
     clickPlus(state){
       state.addActive = true
-    }, 
+    },
 
     clickClose(state){
       state.addActive = false
@@ -34,19 +34,25 @@ export const CartSlice = createSlice({
 
     clickChange(state, action){
       state.items.map(obj => {
-        if(obj.id === action.payload.id) {
-          if(action.payload.title != '' || action.payload.text != ''){
-            obj.title = action.payload.title
-            obj.text = action.payload.text
-            state.isNoteOpen = false
-          }
+        if((obj.id === action.payload.id) && (action.payload.title || action.payload.text)) {
+          obj.title = action.payload.title;
+          obj.text = action.payload.text;
+          state.isNoteOpen = false;
         }
       })
+    },
 
+    clickDelete(state, action) {
+      state.items.forEach(element => {
+        if(element.id === action.payload){
+          state.items = state.items.filter(obj => obj.id !== element.id)
+          state.isNoteOpen = false
+        }
+      });
     }
   },
 })
 
-export const { clickPlus, clickClose, clickAdd, clickNote, clickChange } = CartSlice.actions
+export const { clickPlus, clickClose, clickAdd, clickNote, clickChange, clickDelete } = CartSlice.actions
 
 export default CartSlice.reducer

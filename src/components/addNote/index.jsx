@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './todoEmpty.module.scss'
+import styles from './addNote.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { clickAdd, clickClose } from '../../redux/slices/addCartSlice'
-import addCartSlice from '../../redux/slices/addCartSlice'
+import { clickAdd, clickClose } from '../../redux/slices/noteSlice'
 
 const TodoEmpty = () => {
   const dispatch = useDispatch()
   const [titleValue, setTitleValue] = React.useState('')
   const [textValue, setTextValue] = React.useState('')
-  const id =  useSelector(state => state.addCartSlice.id) 
+  const id =  useSelector(state => state.noteSlice.id) 
+  const addActive =  useSelector(state => state.noteSlice.addActive) 
 
   const onClickClose = () => {
     dispatch(clickClose())
@@ -23,16 +23,19 @@ const TodoEmpty = () => {
   }
 
   const onClickAdd = () => {
-    if(titleValue || textValue)
-    dispatch(clickAdd({
-      title:titleValue,
-      text:textValue, 
-      id
-    }))
+    if(titleValue || textValue){
+      dispatch(clickAdd({
+        title:titleValue,
+        text:textValue, 
+        id
+      }))
+      setTitleValue('')
+      setTextValue('')
+    }
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={addActive ? styles.wrapperOpen : styles.wrapperClose}>
       <div className={styles.imgWrapper}>
         <svg
           onClick={() => onClickClose()}
@@ -51,7 +54,7 @@ const TodoEmpty = () => {
       <textarea value={textValue} onChange={onChangeText} className={styles.text} placeholder="Введите текст заметки"></textarea>
       <div className={styles.btnGroup}>
         <button onClick={onClickAdd} className={styles.btn}>
-          <h5>Сохранить</h5>
+          <h5>Добавить</h5>
         </button>
       </div>
     </div>

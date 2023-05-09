@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { clickNote } from '../redux/slices/addCartSlice';
+import { clickNote } from '../redux/slices/noteSlice';
 
 const CartItem = ({title, text, id}) => {
   const dispatch = useDispatch()

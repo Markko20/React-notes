@@ -1,12 +1,12 @@
 import CartItem from './components/CartItem';
 import './scss/index.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { clickPlus } from './redux/slices/addCartSlice';
-import TodoEmpty from './components/todoEmpty';
+import { clickPlus } from './redux/slices/noteSlice';
+import TodoEmpty from './components/addNote';
 import NoteOpen from './components/NoteOpen';
 
 function App() {
-  const { items, addActive, isNoteOpen } = useSelector(state => state.addCartSlice)
+  const { items } = useSelector(state => state.noteSlice)
   const dispatch = useDispatch()
 
   const onClickPlus = () => {
@@ -15,9 +15,8 @@ function App() {
 
   return (
     <div className="page-wrapper">
-      {isNoteOpen && <NoteOpen />}
-
-      {addActive && <TodoEmpty />}
+      <NoteOpen />
+      <TodoEmpty />
       <header className="header">
         <h1 className="header__logo">React Notes</h1>
       </header>
