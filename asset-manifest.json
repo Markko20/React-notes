@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Markko20/React-notes/static/css/main.a50d1a57.css",
-    "main.js": "/Markko20/React-notes/static/js/main.411096fa.js",
-    "index.html": "/Markko20/React-notes/index.html",
-    "main.a50d1a57.css.map": "/Markko20/React-notes/static/css/main.a50d1a57.css.map",
-    "main.411096fa.js.map": "/Markko20/React-notes/static/js/main.411096fa.js.map"
+    "main.css": "/react-notes/static/css/main.a50d1a57.css",
+    "main.js": "/react-notes/static/js/main.411096fa.js",
+    "index.html": "/react-notes/index.html",
+    "main.a50d1a57.css.map": "/react-notes/static/css/main.a50d1a57.css.map",
+    "main.411096fa.js.map": "/react-notes/static/js/main.411096fa.js.map"
   },
   "entrypoints": [
     "static/css/main.a50d1a57.css",
