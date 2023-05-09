@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/React-notes/static/css/main.a50d1a57.css",
-    "main.js": "/React-notes/static/js/main.411096fa.js",
+    "main.js": "/React-notes/static/js/main.c2c88a24.js",
     "index.html": "/React-notes/index.html",
     "main.a50d1a57.css.map": "/React-notes/static/css/main.a50d1a57.css.map",
-    "main.411096fa.js.map": "/React-notes/static/js/main.411096fa.js.map"
+    "main.c2c88a24.js.map": "/React-notes/static/js/main.c2c88a24.js.map"
   },
   "entrypoints": [
     "static/css/main.a50d1a57.css",
-    "static/js/main.411096fa.js"
+    "static/js/main.c2c88a24.js"
   ]
 }
